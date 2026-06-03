@@ -8,24 +8,91 @@
 </head>
 <body>
     <header>
-        <nav></nav>
+        <!-- Logotipo y navegación principal -->
+        <div class="logo">VidaPlena SpA</div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
+        <!-- Sección Hero -->
         <section id="hero">
-            </section>
+            <h1>Bienestar y Salud Integral para Ti</h1>
+            <p>Descubre tu equilibrio perfecto con nuestros servicios especializados.</p>
+            <a href="#contacto" class="btn">Reserva tu hora</a>
+        </section>
 
+        <!-- Sección Beneficios -->
         <section id="beneficios">
-            </section>
+            <h2>Nuestros Servicios</h2>
+            <div class="servicios-contenedor">
+                <article class="servicio">
+                    <!-- Recuerda descargar una imagen para este servicio -->
+                    <img src="img/servicio1.jpg" alt="Terapia Física">
+                    <h3>Terapia Física</h3>
+                    <p>Recupera tu movilidad y elimina el dolor con nuestros especialistas.</p>
+                </article>
+                <article class="servicio">
+                    <img src="img/servicio2.jpg" alt="Nutrición Saludable">
+                    <h3>Nutrición</h3>
+                    <p>Planes de alimentación personalizados para alcanzar tus metas.</p>
+                </article>
+                <article class="servicio">
+                    <img src="img/servicio3.jpg" alt="Salud Mental">
+                    <h3>Salud Mental</h3>
+                    <p>Apoyo psicológico para un bienestar emocional completo.</p>
+                </article>
+            </div>
+        </section>
 
+        <!-- Sección Testimonios -->
         <section id="testimonios">
-            </section>
+            <h2>Lo que dicen nuestros clientes</h2>
+            <div class="testimonios-contenedor">
+                <article class="testimonio">
+                    <p>"Excelente servicio, me ayudaron a recuperarme de mi lesión en tiempo récord."</p>
+                    <h4>- María G.</h4>
+                </article>
+                <article class="testimonio">
+                    <p>"Los planes nutricionales cambiaron mi vida por completo. Muy recomendados."</p>
+                    <h4>- Carlos R.</h4>
+                </article>
+            </div>
+        </section>
 
+        <!-- Sección Contacto -->
         <section id="contacto">
-            </section>
+            <h2>Contáctanos</h2>
+            <form action="#" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+
+                <button type="submit" class="btn">Enviar Mensaje</button>
+            </form>
+        </section>
     </main>
 
     <footer>
-        </footer>
+        <!-- Información de contacto y derechos de autor -->
+        <div class="footer-info">
+            <p>Contacto: info@vidaplena.cl | Tel: +56 9 1234 5678</p>
+            <div class="redes-sociales">
+                <a href="#">Facebook</a> | <a href="#">Instagram</a>
+            </div>
+        </div>
+        <p>&copy; 2024 VidaPlena SpA. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
