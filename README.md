@@ -12,4 +12,4 @@ Esta web permite:
 
 ## Cómo visualizar
 
-Al ser un sitio estático, puedes abrir `/tmp/workspace/jjmmpprr3-coder/landing-vidaplena/index.html` en tu navegador.
+Al ser un sitio estático, puedes abrir `index.html` en tu navegador.
