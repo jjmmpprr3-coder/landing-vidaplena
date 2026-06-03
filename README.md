@@ -8,7 +8,7 @@ Esta web permite:
 
 - Captar clientes potenciales con un mensaje claro de valor.
 - Comunicar los servicios principales de VidaPlena.
-- Facilitar el contacto con el equipo mediante formulario, correo y teléfono.
+- Facilitar el contacto con el equipo mediante formulario y correo.
 
 ## Cómo visualizar
 
