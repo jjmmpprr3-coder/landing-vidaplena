@@ -197,7 +197,9 @@
         <h2>Contáctanos</h2>
         <p>Déjanos tus datos y te responderemos a la brevedad para coordinar una primera reunión.</p>
 
-        <form action="mailto:contacto@vidaplena.cl" method="post" enctype="text/plain">
+        <form action="https://formsubmit.co/contacto@vidaplena.cl" method="post">
+          <input type="hidden" name="_subject" value="Nuevo contacto desde VidaPlena.cl" />
+          <input type="hidden" name="_captcha" value="false" />
           <div>
             <label for="nombre">Nombre</label>
             <input id="nombre" name="nombre" type="text" required />
@@ -215,7 +217,7 @@
 
         <p>
           También puedes escribirnos a <a href="mailto:contacto@vidaplena.cl">contacto@vidaplena.cl</a>
-          o llamarnos al <a href="tel:+56912345678">+56 9 1234 5678</a>.
+          o llamarnos al <a href="tel:+56912345678" aria-label="Llamar al +56 9 1234 5678">+56 9 1234 5678</a>.
         </p>
       </div>
     </section>
