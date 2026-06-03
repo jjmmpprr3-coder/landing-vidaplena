@@ -131,6 +131,12 @@
       color: var(--secondary);
     }
 
+    small {
+      display: block;
+      color: var(--muted);
+      margin-top: 0.25rem;
+    }
+
     input, textarea {
       width: 100%;
       padding: 0.65rem;
@@ -228,24 +234,28 @@
 
         <form action="https://formsubmit.co/contacto@vidaplena.cl" method="post">
           <input type="hidden" name="_subject" value="Nuevo contacto desde VidaPlena.cl" />
+          <input type="hidden" name="_captcha" value="true" />
           <div>
             <label for="nombre">Nombre</label>
-            <input id="nombre" name="nombre" type="text" required />
+            <input id="nombre" name="nombre" type="text" aria-describedby="nombre-ayuda" required />
+            <small id="nombre-ayuda">Campo obligatorio.</small>
           </div>
           <div>
             <label for="email">Correo electrónico</label>
-            <input id="email" name="email" type="email" required />
+            <input id="email" name="email" type="email" aria-describedby="email-ayuda" required />
+            <small id="email-ayuda">Ingresa un correo válido.</small>
           </div>
           <div>
             <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            <textarea id="mensaje" name="mensaje" rows="5" aria-describedby="mensaje-ayuda" required></textarea>
+            <small id="mensaje-ayuda">Describe brevemente tu necesidad.</small>
           </div>
           <button type="submit">Enviar mensaje</button>
         </form>
 
         <p>
-          También puedes escribirnos a <a href="mailto:contacto@vidaplena.cl" aria-label="Enviar correo a contacto@vidaplena.cl">contacto@vidaplena.cl</a>
-          o llamarnos al <a href="tel:+56912345678" aria-label="Llamar al +56 9 1234 5678">+56 9 1234 5678</a>.
+          También puedes escribirnos a <a href="mailto:contacto@vidaplena.cl">contacto@vidaplena.cl</a>
+          o llamarnos al <a href="tel:+56912345678">+56 9 1234 5678</a>.
         </p>
       </div>
     </section>
