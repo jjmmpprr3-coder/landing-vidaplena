@@ -1,0 +1,226 @@
+/* 1. Variables CSS (Custom Properties) y Accesibilidad (Contraste adecuado) */
+:root {
+    --color-primario: #0056b3; /* Azul oscuro - Alto contraste */
+    --color-secundario: #f4f7f6; /* Gris muy claro para fondo */
+    --color-texto: #333333; /* Texto oscuro para legibilidad (Mínimo 16px) */
+    --color-blanco: #ffffff;
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --espaciado-secciones: 4rem 2rem;
+}
+
+/* 2. Reset básico y Tipografía base (Accesibilidad) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Desplazamiento suave entre secciones */
+}
+
+body {
+    font-family: var(--fuente-principal);
+    font-size: 16px; /* Requisito mínimo de rúbrica */
+    color: var(--color-texto);
+    background-color: var(--color-secundario);
+    line-height: 1.6;
+}
+
+/* 3. HEADER Y NAVEGACIÓN (Uso de Flexbox) */
+header {
+    background-color: var(--color-blanco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-primario);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-texto);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+/* Selectores avanzados (pseudo-clases) */
+nav a:hover, nav a:focus {
+    color: var(--color-primario);
+}
+
+/* 4. SECCIÓN HERO */
+#hero {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--color-blanco);
+    color: var(--color-primario);
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid var(--color-blanco);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--color-blanco);
+}
+
+/* 5. SECCIONES GENERALES */
+#beneficios, #testimonios, #contacto {
+    padding: var(--espaciado-secciones);
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: var(--color-primario);
+}
+
+/* 6. BENEFICIOS Y TESTIMONIOS (Uso de CSS Grid) */
+.servicios-contenedor, .testimonios-contenedor {
+    display: grid;
+    grid-template-columns: 1fr; /* Diseño inicial para móviles: 1 columna */
+    gap: 2rem;
+}
+
+.servicio, .testimonio {
+    background-color: var(--color-blanco);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.servicio img {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+}
+
+.testimonio {
+    border-left: 5px solid var(--color-primario);
+    font-style: italic;
+    text-align: left;
+}
+
+.testimonio h4 {
+    margin-top: 1rem;
+    color: var(--color-primario);
+}
+
+/* 7. FORMULARIO DE CONTACTO */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--fuente-principal);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+form .btn {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border-color: var(--color-primario);
+}
+
+form .btn:hover {
+    background-color: var(--color-blanco);
+    color: var(--color-primario);
+}
+
+/* 8. FOOTER */
+footer {
+    background-color: #222;
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 2rem;
+}
+
+.footer-info {
+    margin-bottom: 1rem;
+}
+
+.redes-sociales a {
+    color: #4da6ff;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.redes-sociales a:hover {
+    text-decoration: underline;
+}
+
+/* 9. RESPONSIVE DESIGN (Mínimo 2 Breakpoints) */
+
+/* Breakpoint 1: Tablets */
+@media (min-width: 768px) {
+    .servicios-contenedor {
+        grid-template-columns: repeat(2, 1fr); /* Pasa a 2 columnas */
+    }
+    .testimonios-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Breakpoint 2: Desktops y pantallas grandes */
+@media (min-width: 1024px) {
+    .servicios-contenedor {
+        grid-template-columns: repeat(3, 1fr); /* Pasa a 3 columnas */
+    }
+}
