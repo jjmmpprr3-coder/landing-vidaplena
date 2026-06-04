@@ -66,10 +66,15 @@ nav a:hover, nav a:focus {
 
 /* 4. SECCIÓN HERO */
 #hero {
-    background-color: var(--color-primario);
+    /* Eliminamos el color de fondo sólido y agregamos la imagen con un filtro oscuro (overlay) para asegurar el contraste de accesibilidad */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/hero-fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
     color: var(--color-blanco);
     text-align: center;
-    padding: 6rem 2rem;
+    padding: 8rem 2rem; /* Aumentamos un poco el padding para que la imagen luzca más */
 }
 
 #hero h1 {
